@@ -8,7 +8,7 @@ app = Flask(__name__)
 def main():
     global seed
     if request.method == 'POST':
-        subprocess.Popen(["python", "stress_cpu.py"])
+        subprocess.Popen(["python3", "stress_cpu.py"])
         return jsonify({"message": "Stressing CPU in a separate process"})
 
     elif request.method == 'GET':
